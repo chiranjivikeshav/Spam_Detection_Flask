@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   
+<style>
+
+
+
+
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    color: #682ba1;
+}
+
+form {
+    margin: 20px auto;
+    width: 70%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #2b2b48;
+    border: 2px solid #555;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+textarea {
+   width:500px;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+textarea:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+textarea:focus {
+    background-color: #555;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to bottom, #682ba1, #511e87);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #511e87, #682ba1);
+}
+
+.switch-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.switch-label {
+    color: #888;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #888;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #682ba1;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.result {
+    margin-top: 20px;
+    background-color: #363636; /* Darker result background (dark grey) */
+    border: 1px solid #8A2BE2; /* Dark purple border for the result box */
+    padding: 10px;
+    color: #fff; /* Text color in the result box */
+}
+
+/* Emojis for sentiment */
+.positive {
+    color: #8A2BE2; /* Dark purple color for positive sentiment */
+    font-size: 50px;
+    font-weight: bold;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.neutral {
+    color: #f0ad4e; /* Orange color for neutral sentiment */
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.negative {
+    color: #d9534f; /* Red color for negative sentiment */
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+</style>
+
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Spam Detection</h1>
+    <hr/>
+    <form action="/check_spam" method="post">
+        <textarea name="email_text" rows="10" cols="50" placeholder="Enter Email Text Here"></textarea>
+        
+        <input type="submit" value="Check for Spam">
+    </form>
+    
+</body>
+</html>
+
+</body>
+</html>
